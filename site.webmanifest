@@ -1,0 +1,12 @@
+{
+  "name": "Pentium Chambers",
+  "short_name": "Pentium",
+  "description": "Abuja commercial law firm, established 2001.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1e33",
+  "theme_color": "#0a1e33",
+  "icons": [
+    { "src": "images/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

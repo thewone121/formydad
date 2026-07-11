@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract architectural line illustration — placeholder for professional office photography">
+  <!-- PLACEHOLDER ART: replace with commissioned photography of the firm's Abuja offices / skyline. -->
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7c193" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#d7c193" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="line2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fa8d8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7fa8d8" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke-width="1.5" opacity="0.9">
+    <!-- Skyline towers rendered as thin architectural outlines -->
+    <g stroke="url(#line2)">
+      <path d="M120 900 L120 430 L260 360 L260 900"/>
+      <path d="M150 430 L150 900 M190 400 L190 900 M225 380 L225 900"/>
+      <path d="M120 430 L260 360 M126 470 L260 400 M126 520 L260 450 M126 570 L260 500"/>
+    </g>
+    <g stroke="url(#line)">
+      <path d="M330 900 L330 260 L520 210 L520 900"/>
+      <path d="M370 245 L370 900 M410 235 L410 900 M455 224 L455 900 M492 216 L492 900"/>
+      <path d="M330 300 L520 255 M330 350 L520 305 M330 400 L520 355 M330 460 L520 415 M330 520 L520 475 M330 590 L520 545 M330 660 L520 615 M330 730 L520 685"/>
+    </g>
+    <g stroke="url(#line2)">
+      <path d="M600 900 L600 470 L720 470 L720 900"/>
+      <path d="M636 470 L636 900 M672 470 L672 900 M700 470 L700 900"/>
+      <path d="M600 540 L720 540 M600 620 L720 620 M600 700 L720 700 M600 780 L720 780"/>
+    </g>
+    <!-- Central tallest tower -->
+    <g stroke="url(#line)">
+      <path d="M820 900 L820 120 L1040 150 L1040 900"/>
+      <path d="M860 132 L860 900 M905 140 L905 900 M950 148 L950 900 M995 156 L995 900"/>
+      <path d="M820 200 L1040 226 M820 260 L1040 286 M820 320 L1040 346 M820 390 L1040 416 M820 460 L1040 486 M820 540 L1040 566 M820 620 L1040 646 M820 700 L1040 726 M820 780 L1040 806"/>
+      <path d="M930 120 L930 80" stroke="#d7c193" stroke-opacity="0.5"/>
+    </g>
+    <g stroke="url(#line2)">
+      <path d="M1120 900 L1120 340 L1300 300 L1300 900"/>
+      <path d="M1160 330 L1160 900 M1205 320 L1205 900 M1255 310 L1255 900"/>
+      <path d="M1120 400 L1300 362 M1120 470 L1300 432 M1120 550 L1300 512 M1120 640 L1300 602 M1120 740 L1300 702"/>
+    </g>
+    <g stroke="url(#line)">
+      <path d="M1360 900 L1360 500 L1500 470 L1500 900"/>
+      <path d="M1400 492 L1400 900 M1445 483 L1445 900 M1478 476 L1478 900"/>
+      <path d="M1360 560 L1500 532 M1360 640 L1500 610 M1360 730 L1500 702"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+# robots.txt — Pentium Chambers
+# https://www.pentiumchambers.com/
+
+User-agent: *
+Allow: /
+Disallow: /_build/
+
+# Sitemap
+Sitemap: https://www.pentiumchambers.com/sitemap.xml

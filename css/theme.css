@@ -1,0 +1,395 @@
+/* =============================================================================
+   PENTIUM CHAMBERS — Legal Practitioners & Consultants
+   theme.css — Design tokens, reset & base layer
+   -----------------------------------------------------------------------------
+   Brand system: "Enduring Counsel. Modern Practice."
+   Palette : Deep Navy · Off-White (paper) · Deep Charcoal · Muted Gold · Slate
+   Type    : Cormorant Garamond (display serif) · Manrope (UI/body sans)
+             IBM Plex Mono (technical accents, indices, statistics)
+   Author  : Digital Agency — Flagship build, 2026
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   1. FONTS
+   Loaded via <link preconnect> in the document <head> for performance.
+   Declared here as the single source of truth for the family stacks.
+-------------------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------------------
+   2. DESIGN TOKENS
+-------------------------------------------------------------------------------*/
+:root {
+  /* --- Brand colour primitives ------------------------------------------- */
+  --c-navy-900: #081625;   /* deepest navy — near black-blue                  */
+  --c-navy-800: #0a1e33;   /* primary deep navy                               */
+  --c-navy-700: #10314f;   /* elevated navy                                   */
+  --c-navy-600: #1a4066;   /* hover navy                                      */
+  --c-charcoal: #14181d;   /* deep charcoal                                   */
+  --c-ink:      #191b1f;   /* text on light                                   */
+
+  --c-paper:    #f6f3ec;   /* off-white — primary light background            */
+  --c-paper-2:  #fbfaf5;   /* raised off-white (cards on paper)               */
+  --c-paper-3:  #efeadf;   /* recessed / rules on paper                       */
+  --c-white:    #ffffff;
+
+  --c-gold:      #c2a25c;  /* muted gold — accent                             */
+  --c-gold-soft: #d7c193;  /* soft gold — hairlines, glints                   */
+  --c-gold-deep: #a5843b;  /* deep gold — text-weight accent on light         */
+
+  --c-slate-700: #3a4350;
+  --c-slate-500: #5c6672;  /* support slate grey                              */
+  --c-slate-400: #7d8794;
+  --c-slate-300: #a7afba;
+  --c-slate-200: #cdd3da;
+
+  /* --- Feedback ---------------------------------------------------------- */
+  --c-error:   #b3271f;    /* professional red    */
+  --c-error-2: #7c1a15;
+  --c-success: #1f7a49;    /* professional green  */
+  --c-success-2:#12603a;
+  --c-warning: #b0791f;
+
+  /* --- Semantic tokens (LIGHT theme is the default) ---------------------- */
+  --bg:          var(--c-paper);
+  --bg-raised:   var(--c-paper-2);
+  --bg-inset:    var(--c-paper-3);
+  --bg-invert:   var(--c-navy-800);      /* dark sections on a light page    */
+  --surface-line:#e2dccf;                /* hairline rules on paper          */
+  --surface-line-strong:#d3ccbb;
+
+  --text:        var(--c-ink);
+  --text-soft:   #4a515b;                /* secondary body                   */
+  --text-mut:    var(--c-slate-500);     /* muted / captions                 */
+  --text-invert: #eef1f5;                /* text on navy                     */
+  --text-invert-mut:#a9b6c6;
+
+  --accent:      var(--c-gold-deep);     /* accent on light bg (AA text)     */
+  --accent-line: var(--c-gold);          /* decorative gold                  */
+  --accent-glow: rgba(194,162,92,.16);
+
+  --link:        var(--c-navy-700);
+  --link-hover:  var(--c-gold-deep);
+
+  --focus-ring:  #2b6cb0;                /* high-contrast focus              */
+
+  /* --- Elevation --------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(8,22,37,.06);
+  --shadow-sm: 0 4px 14px -6px rgba(8,22,37,.14);
+  --shadow-md: 0 18px 44px -22px rgba(8,22,37,.30);
+  --shadow-lg: 0 40px 80px -32px rgba(8,22,37,.36);
+  --shadow-gold: 0 20px 60px -28px rgba(165,132,59,.55);
+
+  /* --- Radii ------------------------------------------------------------- */
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* --- Typography families ---------------------------------------------- */
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans:    "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+  /* --- Fluid type scale (clamp: min, preferred, max) --------------------- */
+  --fs-mono:  0.72rem;                                   /* eyebrows/labels   */
+  --fs-xs:    clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);
+  --fs-sm:    clamp(0.86rem, 0.83rem + 0.15vw, 0.94rem);
+  --fs-base:  clamp(1rem, 0.97rem + 0.2vw, 1.075rem);
+  --fs-md:    clamp(1.1rem, 1.04rem + 0.35vw, 1.28rem);
+  --fs-lg:    clamp(1.3rem, 1.18rem + 0.6vw, 1.6rem);
+  --fs-xl:    clamp(1.7rem, 1.4rem + 1.4vw, 2.4rem);
+  --fs-2xl:   clamp(2.2rem, 1.7rem + 2.4vw, 3.4rem);
+  --fs-3xl:   clamp(2.8rem, 2rem + 3.9vw, 4.6rem);
+  --fs-4xl:   clamp(3.3rem, 2.1rem + 5.6vw, 6rem);
+  --fs-hero:  clamp(3rem, 1.6rem + 6.6vw, 7rem);
+
+  --lh-tight: 1.03;
+  --lh-snug:  1.16;
+  --lh-body:  1.68;
+  --ls-tight: -0.02em;
+  --ls-wide:  0.02em;
+  --ls-eyebrow: 0.32em;
+
+  /* --- Spacing scale ----------------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 9rem);
+
+  /* --- Layout ------------------------------------------------------------ */
+  --container: 1240px;
+  --container-wide: 1440px;
+  --container-narrow: 780px;
+  --gutter: clamp(1.25rem, 0.6rem + 3vw, 3.5rem);
+  --nav-h: 84px;
+
+  /* --- Motion ------------------------------------------------------------ */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 180ms;
+  --t: 320ms;
+  --t-slow: 620ms;
+
+  /* --- Z-index scale ----------------------------------------------------- */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-nav: 500;
+  --z-float: 600;
+  --z-overlay: 800;
+  --z-modal: 900;
+  --z-toast: 1000;
+
+  color-scheme: light;
+}
+
+/* -----------------------------------------------------------------------------
+   3. DARK THEME
+   Toggled via [data-theme="dark"] on <html>. Persisted in localStorage.
+-------------------------------------------------------------------------------*/
+:root[data-theme="dark"] {
+  --bg:          #070f1a;
+  --bg-raised:   #0d1a2b;
+  --bg-inset:    #0a1521;
+  --bg-invert:   #f6f3ec;
+  --surface-line:#1c2c40;
+  --surface-line-strong:#263a53;
+
+  --text:        #e9edf3;
+  --text-soft:   #c2ccd9;
+  --text-mut:    #8595a8;
+  --text-invert: #0a1e33;
+  --text-invert-mut:#3a4655;
+
+  --accent:      var(--c-gold-soft);
+  --accent-line: var(--c-gold);
+  --accent-glow: rgba(215,193,147,.18);
+
+  --link:        #d7c193;
+  --link-hover:  #ecdcb3;
+  --focus-ring:  #7fb2e6;
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-sm: 0 6px 20px -8px rgba(0,0,0,.6);
+  --shadow-md: 0 22px 50px -24px rgba(0,0,0,.72);
+  --shadow-lg: 0 44px 90px -34px rgba(0,0,0,.8);
+  --shadow-gold: 0 20px 60px -28px rgba(215,193,147,.28);
+
+  color-scheme: dark;
+}
+
+/* -----------------------------------------------------------------------------
+   4. MODERN RESET
+-------------------------------------------------------------------------------*/
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-padding-top: calc(var(--nav-h) + 1.5rem);
+  tab-size: 4;
+}
+body {
+  min-height: 100svh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  overflow-x: hidden;
+  transition: background var(--t) var(--ease), color var(--t) var(--ease);
+}
+img, picture, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+svg { fill: currentColor; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+a { color: var(--link); text-decoration: none; transition: color var(--t-fast) var(--ease); }
+a:hover { color: var(--link-hover); }
+ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+:where(h1,h2,h3,h4,h5,h6) { text-wrap: balance; }
+p { text-wrap: pretty; }
+hr { border: 0; height: 1px; background: var(--surface-line); }
+
+/* -----------------------------------------------------------------------------
+   5. TYPOGRAPHY BASE
+-------------------------------------------------------------------------------*/
+.display, h1, h2, h3, .h-serif {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--text);
+}
+h1 { font-size: var(--fs-3xl); line-height: var(--lh-tight); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-family: var(--font-sans); font-size: var(--fs-md); font-weight: 600; letter-spacing: -0.01em; line-height: var(--lh-snug); }
+h5, h6 { font-family: var(--font-sans); font-weight: 600; }
+strong, b { font-weight: 700; }
+em { font-style: italic; }
+small { font-size: var(--fs-sm); }
+
+/* Eyebrow / kicker — mono, letter-spaced, uppercase */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: 500;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
+}
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+  opacity: .7;
+}
+.eyebrow--center::before { display: none; }
+
+.lead {
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--text-soft);
+  font-weight: 400;
+}
+.index-num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+/* -----------------------------------------------------------------------------
+   6. SELECTION, FOCUS & ACCESSIBILITY
+-------------------------------------------------------------------------------*/
+::selection { background: var(--c-navy-800); color: #fff; }
+:root[data-theme="dark"] ::selection { background: var(--c-gold); color: #0a1e33; }
+
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--r-xs);
+}
+:focus:not(:focus-visible) { outline: none; }
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: var(--z-toast);
+  transform: translateY(-160%);
+  background: var(--c-navy-800);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--t) var(--ease);
+}
+.skip-link:focus { transform: translateY(0); color: #fff; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   7. LAYOUT UTILITIES
+-------------------------------------------------------------------------------*/
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--wide { max-width: var(--container-wide); }
+.container--narrow { max-width: var(--container-narrow); }
+
+.section { padding-block: var(--section-y); position: relative; }
+.section--tight { padding-block: clamp(3rem, 2rem + 4vw, 5.5rem); }
+.section--flush-top { padding-top: 0; }
+
+.section-head { max-width: 62ch; }
+.section-head--center { margin-inline: auto; text-align: center; }
+.section-head .eyebrow { margin-bottom: 1.2rem; }
+.section-head h2 { margin-bottom: 1rem; }
+
+.rule { height: 1px; background: var(--surface-line); border: 0; }
+.rule--gold { background: linear-gradient(90deg, var(--accent-line), transparent); height: 2px; width: 64px; }
+
+.stack > * + * { margin-top: var(--flow, 1rem); }
+
+.grid { display: grid; gap: var(--gap, 1.5rem); }
+
+/* Colour-context blocks */
+.on-dark {
+  background: var(--bg-invert);
+  color: var(--text-invert);
+}
+.on-dark h1, .on-dark h2, .on-dark h3 { color: var(--text-invert); }
+.on-dark .lead { color: var(--text-invert-mut); }
+.on-dark .eyebrow { color: var(--c-gold-soft); }
+:root[data-theme="dark"] .on-dark { color: var(--text-invert); }
+
+/* Screen-reader-only utility retained; decorative helpers */
+.text-mut { color: var(--text-mut); }
+.text-accent { color: var(--accent); }
+.mono { font-family: var(--font-mono); }
+.serif { font-family: var(--font-display); }
+
+/* -----------------------------------------------------------------------------
+   8. REDUCED MOTION
+-------------------------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* -----------------------------------------------------------------------------
+   9. PRINT
+-------------------------------------------------------------------------------*/
+@media print {
+  :root { --bg: #fff; --text: #000; }
+  .site-header, .site-footer, .floating-actions, .cookie-banner,
+  .scroll-progress, .back-to-top, .to-consult, .hero-media, video { display: none !important; }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  a { color: #000; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+  .section { padding-block: 1.2rem; }
+  .card, .panel { break-inside: avoid; border: 1px solid #bbb; }
+}

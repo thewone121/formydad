@@ -1,0 +1,115 @@
+    <section class="page-hero" aria-labelledby="con-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Contact</span></nav>
+        <p class="eyebrow">Get in Touch</p>
+        <h1 id="con-title">Let's begin a conversation.</h1>
+        <p class="page-lead">Whether you face a dispute, a transaction or a question of strategy, our team is ready to listen. Reach us directly, or book a confidential consultation below.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section class="section" aria-labelledby="details-h">
+      <div class="container">
+        <h2 id="details-h" class="visually-hidden">Contact details</h2>
+        <div class="cards cards--4" data-reveal>
+          <div class="card card--outline"><span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><h3 style="font-size:var(--fs-md)">Visit</h3><p>7B Suez Crescent, Ibrahim Abacha Estate (Behind Sheraton Hotel), Zone 4, Wuse, Abuja.</p></div>
+          <div class="card card--outline"><span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><h3 style="font-size:var(--fs-md)">Email</h3><p><a href="mailto:pentiumchambers@gmail.com">pentiumchambers@gmail.com</a></p></div>
+          <div class="card card--outline"><span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 9 6 15 15 15l1.5-3.5-4-2-2 2a12 12 0 0 1-5-5l2-2-2-4Z"/></svg></span><h3 style="font-size:var(--fs-md)">Call</h3><p><a href="tel:+23492732568">+234 9 273 2568</a><br /><a href="tel:+2348033327676">+234 803 332 7676</a></p></div>
+          <div class="card card--outline"><span class="card-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Z"/></svg></span><h3 style="font-size:var(--fs-md)">WhatsApp</h3><p><a href="https://wa.me/2348033327676" target="_blank" rel="noopener">Message us on WhatsApp</a> <span class="text-mut" style="font-size:var(--fs-xs)">[number to be confirmed]</span></p></div>
+        </div>
+
+        <div class="cards cards--2 mt-2" data-reveal>
+          <div class="panel panel--inset"><div style="display:flex;gap:0.8rem;align-items:center"><span class="badge-round"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Office Hours</span></div><p class="mt-1">Monday – Friday, 8:30am – 5:30pm (WAT). <span class="text-mut">[Hours to be confirmed by the firm.]</span></p></div>
+          <div class="panel panel--inset"><div style="display:flex;gap:0.8rem;align-items:center"><span class="badge-round"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 4.5 3.5 7.5 8 9 4.5-1.5 8-4.5 8-9V6Z"/></svg> Urgent Matters</span></div><p class="mt-1">For time-critical instructions, call +234 803 332 7676. <span class="text-mut">[Emergency line to be confirmed.]</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION FORM -->
+    <section class="section section--flush-top" id="consultation" aria-labelledby="consult-h">
+      <div class="container">
+        <div class="split split--55" style="align-items:start">
+          <div data-reveal="left">
+            <p class="eyebrow">Book a Consultation</p>
+            <h2 id="consult-h">Request a confidential consultation.</h2>
+            <p class="lead">Tell us a little about your matter. We will review your request and arrange a time to speak — in person, by phone or by video.</p>
+            <div class="panel panel--inset mt-3">
+              <p class="badge-round"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg> What to expect</p>
+              <ul class="prose mt-1" style="max-width:none"><li>A confidential, no-obligation first discussion.</li><li>A candid assessment of your position.</li><li>A clear proposed path forward.</li></ul>
+            </div>
+          </div>
+
+          <form class="form panel" data-form data-endpoint="consultation" data-success="Thank you — your consultation request has been received. We will contact you to confirm a time." data-reveal aria-label="Consultation booking form">
+            <div class="form-status" aria-live="polite"></div>
+            <div class="form-grid">
+              <div class="field"><label for="b-name">Full name <span class="req">*</span></label><input class="control" id="b-name" name="name" type="text" required autocomplete="name" /><span class="field-error"></span></div>
+              <div class="field"><label for="b-org">Organisation</label><input class="control" id="b-org" name="organisation" type="text" autocomplete="organization" /><span class="field-error"></span></div>
+              <div class="field"><label for="b-email">Email <span class="req">*</span></label><input class="control" id="b-email" name="email" type="email" required inputmode="email" autocomplete="email" /><span class="field-error"></span></div>
+              <div class="field"><label for="b-phone">Phone <span class="req">*</span></label><input class="control" id="b-phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" /><span class="field-error"></span></div>
+              <div class="field field--full"><label for="b-area">Practice area <span class="req">*</span></label>
+                <select class="control" id="b-area" name="practiceArea" required>
+                  <option value="">Please select…</option>
+                  <option>Commercial Litigation</option><option>Corporate Law</option><option>Banking &amp; Finance</option>
+                  <option>Civil Litigation</option><option>Criminal Litigation</option><option>Constitutional Law</option>
+                  <option>Oil &amp; Gas</option><option>Arbitration &amp; ADR</option><option>Information Technology Law</option>
+                  <option>Capital Markets</option><option>Corporate Advisory</option><option>Legal Consultancy</option><option>Other / Not sure</option>
+                </select><span class="field-error"></span>
+              </div>
+              <div class="field"><label for="b-format">Preferred format</label>
+                <select class="control" id="b-format" name="format"><option>In person (Abuja)</option><option>Telephone</option><option>Video call</option></select><span class="field-error"></span>
+              </div>
+              <div class="field"><label for="b-when">Preferred date</label><input class="control" id="b-when" name="preferredDate" type="date" /><span class="field-error"></span></div>
+              <div class="field field--full"><label for="b-msg">Briefly, how can we help? <span class="req">*</span></label><textarea class="control" id="b-msg" name="message" required minlength="20" placeholder="Please avoid sharing confidential details until we have confirmed there is no conflict."></textarea><span class="field-error"></span></div>
+              <div class="field field--full"><label class="check"><input type="checkbox" name="consent" required /> <span>I have read the <a href="disclaimer.html">disclaimer</a> and understand that submitting this form does not create a lawyer–client relationship. <span class="req">*</span></span></label><span class="field-error"></span></div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--gold" type="submit">Request consultation <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERAL CONTACT FORM + MAP -->
+    <section class="section section--flush-top" aria-labelledby="msg-h">
+      <div class="container">
+        <div class="split split--55" style="align-items:start">
+          <div data-reveal="left">
+            <p class="eyebrow">General Enquiries</p>
+            <h2 id="msg-h">Send us a message.</h2>
+            <form class="form panel mt-2" data-form data-endpoint="contact" data-success="Thank you — your message has been received. We will respond shortly." aria-label="General contact form">
+              <div class="form-status" aria-live="polite"></div>
+              <div class="form-grid">
+                <div class="field"><label for="g-name">Name <span class="req">*</span></label><input class="control" id="g-name" name="name" type="text" required autocomplete="name" /><span class="field-error"></span></div>
+                <div class="field"><label for="g-email">Email <span class="req">*</span></label><input class="control" id="g-email" name="email" type="email" required inputmode="email" autocomplete="email" /><span class="field-error"></span></div>
+                <div class="field field--full"><label for="g-subject">Subject</label><input class="control" id="g-subject" name="subject" type="text" /><span class="field-error"></span></div>
+                <div class="field field--full"><label for="g-msg">Message <span class="req">*</span></label><textarea class="control" id="g-msg" name="message" required minlength="15"></textarea><span class="field-error"></span></div>
+              </div>
+              <div class="form-actions"><button class="btn" type="submit">Send message</button></div>
+            </form>
+          </div>
+
+          <div data-reveal>
+            <p class="eyebrow">Find Us</p>
+            <h2 style="font-size:var(--fs-lg)">Our Abuja office</h2>
+            <!-- MAP PLACEHOLDER: replace this block with a Google Maps <iframe> embed when ready. -->
+            <a class="panel" href="https://maps.google.com/?q=Ibrahim+Abacha+Estate+Zone+4+Wuse+Abuja" target="_blank" rel="noopener" style="display:block;padding:0;overflow:hidden;position:relative" aria-label="Open the office location in Google Maps">
+              <svg viewBox="0 0 640 360" width="100%" role="img" aria-label="Stylised map of the office location in Zone 4, Wuse, Abuja" style="display:block;background:var(--bg-inset)">
+                <rect width="640" height="360" fill="var(--bg-inset)"/>
+                <g stroke="var(--surface-line-strong)" stroke-width="2" fill="none">
+                  <path d="M0 90 H640 M0 200 H640 M0 290 H640 M120 0 V360 M300 0 V360 M470 0 V360"/>
+                  <path d="M0 40 L200 130 L360 60 L640 170" stroke="var(--accent-line)" stroke-width="3" opacity="0.6"/>
+                </g>
+                <circle cx="300" cy="200" r="42" fill="var(--accent-glow)"/>
+                <path d="M300 168c-13 0-24 11-24 24 0 17 24 40 24 40s24-23 24-40c0-13-11-24-24-24Z" fill="var(--accent)"/>
+                <circle cx="300" cy="192" r="8" fill="#fff"/>
+                <text x="320" y="250" font-family="Manrope, sans-serif" font-size="15" fill="var(--text-mut)">Zone 4, Wuse · Behind Sheraton</text>
+              </svg>
+              <span class="chip chip--gold" style="position:absolute;left:1rem;top:1rem">Open in Google Maps</span>
+            </a>
+            <p class="text-mut mt-1" style="font-size:var(--fs-xs)">Interactive map placeholder — an embedded Google Map can be dropped in here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
